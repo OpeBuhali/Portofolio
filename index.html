@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <a href="#" class="logo">Ope Buhali</a>
+            <nav>
+                <a href="#homes" class="active">Home</a>
+                <a href="#servicess">Services</a>
+                <a href="#educations">Education</a>
+                <a href="#projects">Project</a>
+                <a href="#contacts">Contact</a>
+            </nav>
+            <!-- Dark Mode Toggle -->
+            <div class="toggle-wrapper">
+                <input type="checkbox" class="toggle-checkbox" id="dark-mode-toggle">
+                <label class="toggle-label" for="dark-mode-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <span class="toggle-ball"></span>
+                </label>
+            </div>
+            <!-- Menu Toggle untuk Mobile -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+        </div>
+    </header>
+
+    <section class="home" id="homes">
+        <div class="home-content">
+            <img src="./asset/photoOpe.jpg" alt="Ope Buhali" class="profile-pic">
+            <div class="info">
+                <h1>Ope Buhali</h1>
+                <h2>Software Engineer</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/opebuhali/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/ope-buhali-sugiharto"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/085775692775"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1Cod2oxGge2HA7OBXGqGpToXeGUBcxir8/view?usp=sharing" download class="btn">Download CV</a>
+                <a href="#contacts" class="hire">Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="servicess">
+        <h2>Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Design</h3>
+                <p>Creating responsive and visually appealing websites that offer seamless user experience.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-cogs"></i>
+                <h3>Detection System</h3>
+                <p>AI-based detection systems for applications such as security, object detection, and more.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-tools"></i>
+                <h3>Custom Software Development</h3>
+                <p>Developing tailored software solutions to meet the unique needs of your business or project.</p>
+            </div>
+            <a href="#projects" class="view">View Project</a>
+        </div>
+    </section>
+
+    <section class="education" id="educations">
+        <h2>My Education <i class="fas fa-graduation-cap"></i></h2>
+        <p>I am committed to continuous learning, constantly expanding my skills and knowledge in technology.</p>
+        <div class="education-container">
+            <div class="education-item">
+                <i class="fas fa-school education-icon"></i>
+                <h3>Science and Technology</h3>
+                <p>SMA Negeri 3 Kota Cirebon</p>
+                <p>2016 - 2020</p>
+            </div>
+            <div class="education-item">
+                <i class="fas fa-university education-icon"></i>
+                <h3>Bachelor's Degree in Software Engineering</h3>
+                <p>Zhejiang University of Technology</p>
+                <p>2020 - 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <img src="./asset/project1.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Bloody and Horrible Detection</h3>
+                    <p>This detection built by using Yolov8, i create my own dataset which consist 2.000 due to lack of hardware.</p>
+                    <a class="view" onclick="openModal(1)">View Details</a>
+                </div>
+            </div>
+            <!-- <div class="project-box">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h3>AI Detection System</h3>
+                    <p>An AI-powered object detection system built for a security application.</p>
+                    <a class="view" onclick="openModal(2)">View Details</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="project3.jpg" alt="Project 3">
+                <div class="project-info">
+                    <h3>Mobile App Development</h3>
+                    <p>Custom mobile application for enhancing user engagement in e-commerce platforms.</p>
+                    <a class="view" onclick="openModal(3)">View Details</a>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    
+    <!-- Modal section (place outside the projects section) -->
+<!-- Modal section for Bloody and Horrible Detection -->
+<div id="projectModal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(1)">&times;</span>
+        <h3>Bloody and Horrible Frame Detection</h3>
+        <p>
+            This project involves the automatic detection of violent and bloody frames using OpenCV. The goal is to detect and classify graphic content in real-time, enhancing safety and content moderation for various applications like security footage, movies, and online platforms.
+        </p>
+        <ul>
+            <li><strong>Tools Used:</strong> OpenCV, Python</li>
+            <li><strong>Dataset:</strong> 2000 images</li>
+            <li><strong>Accuracy Achievements:</strong></li>
+            <ul>
+                <li><strong>Violent Frames:</strong> 82%</li>
+                <li><strong>Bloody Frames:</strong> 83%</li>
+                <li><strong>Normal Frames:</strong> 90%</li>
+            </ul>
+        </ul>
+        <p>
+            This model successfully balances precision and performance in identifying violent and disturbing content, making it ideal for content-sensitive environments.
+        </p>
+    </div>
+</div>
+
+    <!-- <div id="projectModal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(2)">&times;</span>
+            <h3>Project 2 Title</h3>
+            <p>Details about Project 2...</p>
+        </div>
+    </div>
+    
+    <div id="projectModal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(3)">&times;</span>
+            <h3>Project 3 Title</h3>
+            <p>Details about Project 3...</p>
+        </div>
+    </div> -->
+    
+    
+    <section class="contact" id="contacts">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="contact-description">Feel free to reach out for collaborations or just a friendly chat!</p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:opebuhali45@gmail.com" aria-label="Email Ope Buhali">OpeBuhali45@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+6285775692775" aria-label="Call Ope Buhali">+6285775692775</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p aria-label="Location">Cirebon, Indonesia</p>
+                </div>
+            </div>
+    
+            <div class="contact-form">
+                <form action="https://formspree.io/f/mrbgzlzj" method="POST">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+    
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Ope Buhali. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
